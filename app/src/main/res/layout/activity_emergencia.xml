@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageButton
+        android:id="@+id/imgBtnBombeiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmergencia"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/bombeiros"
+        android:onClick="LigarBombeiros"/>
+
+
+    <ImageButton
+        android:id="@+id/imgBtnPolicia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmergencia"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/imgBtnBombeiros"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/policia"
+        android:onClick="LigarPolicia"
+        />
+
+    <TextView
+        android:id="@+id/txtEmergencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_x="34dp"
+        android:layout_y="75dp"
+        android:text="Disponibilizamos também, o telefone da polícia e dos bombeiros caso haja possibilidade real de perigo;"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/txtLegendaBombeiros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBtnBombeiros"
+        android:layout_marginLeft="87dp"
+        android:text="Bombeiros" />
+    <TextView
+        android:id="@+id/txtLegendaPolicia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBtnPolicia"
+        android:layout_marginLeft="220dp"
+        android:text="Polícia" />
+
+</RelativeLayout>

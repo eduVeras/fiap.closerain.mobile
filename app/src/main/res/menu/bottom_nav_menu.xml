@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/minha_conta"
+        android:icon="@drawable/minha_conta"
+        android:title="@string/minha_conta" />
+
+    <item
+        android:id="@+id/localizacao"
+        android:icon="@drawable/localizacao"
+        android:title="@string/localizacao"
+            />
+
+    <item
+        android:id="@+id/alertar"
+        android:icon="@drawable/botao_alertar"
+        android:title="@string/alertar"
+
+
+        />
+    <item
+        android:id="@+id/social"
+        android:icon="@drawable/sobre_nos"
+        android:title="@string/social" />
+    <item
+        android:id="@+id/telefones"
+        android:icon="@drawable/telefones"
+        android:title="@string/telefones" />
+
+</menu>
