@@ -18,6 +18,7 @@
         android:id="@+id/alertar"
         android:icon="@drawable/botao_alertar"
         android:title="@string/alertar"
+        
 
 
         />

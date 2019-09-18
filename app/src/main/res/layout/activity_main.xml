@@ -8,14 +8,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="#ffffff"
     >
 
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
-        android:layout_width="411dp"
-        android:layout_height="675dp"
+        android:layout_width="0dp"
+        android:layout_height="662dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,7 +31,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
-
         app:itemIconTint="@color/colorPrimaryDark"
         app:itemTextColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,58 +1,67 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:background="@color/colorPrimary">
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/txtSobreNos"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/imgBtnTwitter"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_x="34dp"
-        android:layout_y="75dp"
-        android:text="@string/SobreNós"
-        android:textAlignment="textStart" />
+        android:layout_below="@+id/txtSobreNos2"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/twitter"
+
+        />
+
+    <ImageButton
+        android:id="@+id/imgBtnFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSobreNos2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/imgBtnTwitter"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/facebook" />
+
+    <ImageButton
+        android:id="@+id/imgBtnInsta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSobreNos2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/imgBtnFace"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/instagram" />
 
     <TextView
         android:id="@+id/txtSobreNos2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSobreNos"
         android:layout_x="34dp"
         android:layout_y="75dp"
-        android:layout_below="@+id/txtSobreNos"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserat"
         android:text="@string/SobreNós2" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/txtSobreNos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:src="@drawable/twitter"
-        android:layout_below="@+id/txtSobreNos2"
-        android:id="@+id/imgBtnTwitter"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_x="34dp"
+        android:layout_y="75dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserat"
+        android:text="@string/SobreNós"
+        android:textAlignment="textStart" />
 
-        />
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:src="@drawable/facebook"
-        android:layout_below="@+id/txtSobreNos2"
-        android:layout_toRightOf="@+id/imgBtnTwitter"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="35dp"
-        android:id="@+id/imgBtnFace"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/instagram"
-        android:layout_marginLeft="35dp"
-        android:layout_below="@+id/txtSobreNos2"
-        android:layout_toRightOf="@+id/imgBtnFace"
-        android:id="@+id/imgBtnInsta"/>
+
+
 </RelativeLayout>
