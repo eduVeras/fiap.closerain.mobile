@@ -12,5 +12,6 @@
     <string name="SobreNós">Um grupo de estudantes que idealizou uma maneira de poder auxiliar e protejer a população de um problema crescente, a chuva. Então trazemos para você uma alternativa simples e fácil de avisar as pessoas próximas à você e as autoridades governamentais, que você está em uma área alagada ou com risco de alagamento.</string>
     <string name="SobreNós2"> Siga-nos nas nossas redes sociais para poder ficar interado com os alagamentos que ocorrem na sua região:</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_alertar">Map</string>
 
 </resources>
