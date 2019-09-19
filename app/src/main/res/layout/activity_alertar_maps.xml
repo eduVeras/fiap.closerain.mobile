@@ -9,13 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/map"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="BOTAO"
-    android:layout_marginTop="300dp">
 
-</Button>
+<!--    <ImageButton-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="107dp"-->
+<!--        android:layout_marginLeft="155dp"-->
+<!--        android:layout_marginTop="430dp"-->
+<!--        android:backgroundTint="#00A33030"-->
+<!--        android:src="@drawable/botao_alertar_2">-->
+<!--        </ImageButton>-->
 
 </FrameLayout>
 

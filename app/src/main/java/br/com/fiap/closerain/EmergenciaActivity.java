@@ -16,6 +16,5 @@ public class EmergenciaActivity  extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_emergencia, container, false);
 
-
     }
 }

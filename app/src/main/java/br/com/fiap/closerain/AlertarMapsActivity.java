@@ -17,6 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -57,7 +58,7 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(final GoogleMap googleMap) {
         MapsInitializer.initialize(getContext());
         mGoogleMap = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -68,6 +69,16 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
         googleMap.addMarker(new MarkerOptions().position(fiap).title("Marker na FIAP"));
         CameraPosition cameraPosition = new CameraPosition(fiap, 15, 0, 0);
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),3000, null);
+        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+
+            public void onMapClick(LatLng position) {
+                googleMap.addMarker(
+                        new MarkerOptions().position(position)
+                );
+            }
+        });
     }
+
+
 
 }

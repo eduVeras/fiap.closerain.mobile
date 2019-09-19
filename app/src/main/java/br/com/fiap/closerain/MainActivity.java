@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     trocaFragment(new AlertarMapsActivity());
                     getSupportActionBar().setTitle(Html.fromHtml("Alertar"));
                     return true;
+
                 case R.id.social:
 
                     trocaFragment(new SobreNosActivity());
@@ -80,7 +81,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     public void LigarBombeiros(View view) {
+
         Uri uri = Uri.parse("tel:"+192);
         Intent intent = new Intent(Intent.ACTION_DIAL,uri);
         startActivity(intent);
