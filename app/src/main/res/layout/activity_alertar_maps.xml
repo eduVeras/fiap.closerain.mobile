@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlertarMapsActivity" >
+    tools:context=".AlertarMapsActivity">
     <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/map"/>
 
-<!--    <ImageButton-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="107dp"-->
-<!--        android:layout_marginLeft="155dp"-->
-<!--        android:layout_marginTop="430dp"-->
-<!--        android:backgroundTint="#00A33030"-->
-<!--        android:src="@drawable/botao_alertar_2">-->
-<!--        </ImageButton>-->
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="107dp"
+        android:layout_marginLeft="305dp"
+        android:layout_marginTop="430dp"
+        android:backgroundTint="#00A33030"
+        android:src="@drawable/alertar_botao"
+        android:onClick="Alertar">
+
+    </ImageButton>
 
 </FrameLayout>
 

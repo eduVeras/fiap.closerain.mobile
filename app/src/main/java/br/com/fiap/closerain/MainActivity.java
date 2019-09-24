@@ -21,7 +21,6 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mTextMessage;
 
 
     @Override
@@ -29,12 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-
-        mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#7bb3e8")));
-
     }
 
     public void trocaFragment(Fragment fragment) {
@@ -51,31 +47,31 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(this);
 
 // Setting Dialog Title
-        alertDialog2.setTitle("Confirm Delete...");
+        alertDialog2.setTitle("Confirmação de Alerta");
 
 // Setting Dialog Message
-        alertDialog2.setMessage("Are you sure you want delete this file?");
+        alertDialog2.setMessage("Você deseja alertar perigo nessa área?");
 
 // Setting Icon to Dialog
     //    alertDialog2.setIcon(R.drawable.delete);
 
 // Setting Positive "Yes" Btn
-        alertDialog2.setPositiveButton("YES",
+        alertDialog2.setPositiveButton(Html.fromHtml("<font color='#7bb3e8'>SIM</font>"),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Write your code here to execute after dialog
                         Toast.makeText(getApplicationContext(),
-                                "You clicked on YES", Toast.LENGTH_SHORT)
+                                "Autoridades alertadas!", Toast.LENGTH_SHORT)
                                 .show();
                     }
                 });
 // Setting Negative "NO" Btn
-        alertDialog2.setNegativeButton("NO",
+        alertDialog2.setNegativeButton(Html.fromHtml("<font color='#7bb3e8'>NÃO</font>"),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Write your code here to execute after dialog
                         Toast.makeText(getApplicationContext(),
-                                "You clicked on NO", Toast.LENGTH_SHORT)
+                                "Operação cancelada", Toast.LENGTH_SHORT)
                                 .show();
                         dialog.cancel();
                     }
@@ -101,15 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.localizacao:
 
                     getSupportActionBar().setTitle(Html.fromHtml("Localização"));
-                    trocaFragment(new MapsActivity());
+                    trocaFragment(new AlertarMapsActivity());
 
-                    return true;
-                case R.id.alertar:
-
-                    trocaFragment(new MapsActivity());
-
-                    ConfirmarAlerta();
-                    getSupportActionBar().setTitle(Html.fromHtml("Alertar"));
                     return true;
 
                 case R.id.social:
@@ -140,5 +129,9 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = Uri.parse("tel:" + 190);
         Intent intent = new Intent(Intent.ACTION_DIAL, uri);
         startActivity(intent);
+    }
+
+    public void Alertar(View view) {
+        ConfirmarAlerta();
     }
 }

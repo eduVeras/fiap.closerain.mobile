@@ -15,11 +15,6 @@
             />
 
     <item
-        android:id="@+id/alertar"
-        android:icon="@drawable/botao_alertar"
-        android:title="@string/alertar"
-        />
-    <item
         android:id="@+id/social"
         android:icon="@drawable/sobre_nos"
         android:title="@string/social" />
