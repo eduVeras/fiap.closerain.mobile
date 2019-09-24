@@ -12,15 +12,16 @@
 
 
     <ImageButton
+        android:id="@+id/imgBtnAlertar"
         android:layout_width="100dp"
         android:layout_height="107dp"
-        android:layout_marginLeft="305dp"
-        android:layout_marginTop="430dp"
+        android:layout_marginLeft="297dp"
+        android:layout_marginTop="422dp"
         android:backgroundTint="#00A33030"
-        android:src="@drawable/alertar_botao"
-        android:onClick="Alertar">
-
+        android:onClick="Alertar"
+        android:src="@drawable/alertar_botao">
     </ImageButton>
+
 
 </FrameLayout>
 

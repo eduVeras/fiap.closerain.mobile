@@ -5,6 +5,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.auth.AccessToken;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,12 +19,18 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    String mensagem;
 
 
     @Override
@@ -131,7 +141,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
     public void Alertar(View view) {
-        ConfirmarAlerta();
+        mensagem = "Atenção!!! Risco de alagamento no bairro da ACLIMAÇÃO!";
+        String token ="1126277588668829696-GFGeGza2Gfj2RcLBl1wzhNZfJq3Ddn";
+        String secret = "ZImtS05huKKnhCaONpIkIj1eLzFHvOOTOw3TQRpCwToP0";
+        AccessToken a = new AccessToken(token,secret);
+        Twitter twitter = new TwitterFactory().getInstance();
+        twitter.setOAuthConsumer("sN31cBmu0lQbInLiz154UKmAz", "naP0nMEG51TTyJGdFyVd3tSNaCfJncatJo1s6I6JLIOG4t8oHT");
+        twitter.setOAuthAccessToken(a);
+        try {
+            twitter.updateStatus(mensagem);
+        } catch (TwitterException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
     }
+
+    
 }

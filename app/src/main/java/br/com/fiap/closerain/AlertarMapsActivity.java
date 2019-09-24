@@ -35,6 +35,7 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Override
@@ -71,7 +72,6 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),3000, null);
 
     }
-
 
 
 }
