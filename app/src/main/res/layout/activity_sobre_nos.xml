@@ -13,6 +13,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="45dp"
         android:background="@color/colorPrimary"
+        android:onClick="irTwitter"
         android:src="@drawable/twitter"
 
         />
@@ -26,6 +27,7 @@
         android:layout_marginTop="45dp"
         android:layout_toRightOf="@+id/imgBtnTwitter"
         android:background="@color/colorPrimary"
+        android:onClick="irFacebook"
         android:src="@drawable/facebook" />
 
     <ImageButton
@@ -37,6 +39,7 @@
         android:layout_marginTop="45dp"
         android:layout_toRightOf="@+id/imgBtnFace"
         android:background="@color/colorPrimary"
+        android:onClick="irInstagram"
         android:src="@drawable/instagram" />
 
     <TextView
@@ -46,9 +49,9 @@
         android:layout_below="@+id/txtSobreNos"
         android:layout_x="34dp"
         android:layout_y="75dp"
-        android:textSize="15sp"
         android:fontFamily="@font/montserat"
-        android:text="@string/SobreNós2" />
+        android:text="@string/SobreNós2"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/txtSobreNos"
@@ -57,11 +60,10 @@
         android:layout_marginTop="15dp"
         android:layout_x="34dp"
         android:layout_y="75dp"
-        android:textSize="15sp"
         android:fontFamily="@font/montserat"
         android:text="@string/SobreNós"
-        android:textAlignment="textStart" />
-
+        android:textAlignment="textStart"
+        android:textSize="15sp" />
 
 
 </RelativeLayout>

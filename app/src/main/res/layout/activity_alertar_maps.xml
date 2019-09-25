@@ -19,7 +19,7 @@
         android:layout_marginTop="422dp"
         android:backgroundTint="#00A33030"
         android:onClick="Alertar"
-        android:src="@drawable/alertar_botao">
+        android:src="@drawable/botao_alertar_verm">
     </ImageButton>
 
 

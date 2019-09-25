@@ -5,10 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
-import twitter4j.auth.AccessToken;
+
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -51,46 +48,41 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
+    private void goToUrl(String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
 
     private void ConfirmarAlerta() {
 
         AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(this);
 
-// Setting Dialog Title
         alertDialog2.setTitle("Confirmação de Alerta");
 
-// Setting Dialog Message
         alertDialog2.setMessage("Você deseja alertar perigo nessa área?");
 
-// Setting Icon to Dialog
-    //    alertDialog2.setIcon(R.drawable.delete);
-
-// Setting Positive "Yes" Btn
         alertDialog2.setPositiveButton(Html.fromHtml("<font color='#7bb3e8'>SIM</font>"),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        // Write your code here to execute after dialog
+
                         Toast.makeText(getApplicationContext(),
                                 "Autoridades alertadas!", Toast.LENGTH_SHORT)
                                 .show();
                     }
                 });
-// Setting Negative "NO" Btn
+
         alertDialog2.setNegativeButton(Html.fromHtml("<font color='#7bb3e8'>NÃO</font>"),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        // Write your code here to execute after dialog
+
                         Toast.makeText(getApplicationContext(),
                                 "Operação cancelada", Toast.LENGTH_SHORT)
                                 .show();
                         dialog.cancel();
                     }
                 });
-
-// Showing Alert Dialog
         alertDialog2.show();
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -142,23 +134,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void Alertar(View view) {
-        mensagem = "Atenção!!! Risco de alagamento no bairro da ACLIMAÇÃO!";
-        String token ="1126277588668829696-GFGeGza2Gfj2RcLBl1wzhNZfJq3Ddn";
-        String secret = "ZImtS05huKKnhCaONpIkIj1eLzFHvOOTOw3TQRpCwToP0";
-        AccessToken a = new AccessToken(token,secret);
-        Twitter twitter = new TwitterFactory().getInstance();
-        twitter.setOAuthConsumer("sN31cBmu0lQbInLiz154UKmAz", "naP0nMEG51TTyJGdFyVd3tSNaCfJncatJo1s6I6JLIOG4t8oHT");
-        twitter.setOAuthAccessToken(a);
-        try {
-            twitter.updateStatus(mensagem);
-        } catch (TwitterException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        ConfirmarAlerta();
 
     }
 
-    
+
+    public void irTwitter(View view) {
+        goToUrl("https://twitter.com/close_rain");
+    }
+
+    public void irFacebook(View view) {
+    }
+
+    public void irInstagram(View view) {
+        goToUrl("https://www.instagram.com/closerain_");
+    }
 }

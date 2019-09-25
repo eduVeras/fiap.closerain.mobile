@@ -1,2 +1,2 @@
-include ':app', ':twitter4j-core-4.0.7'
+include ':app'
 rootProject.name='CloseRain'

@@ -13,5 +13,27 @@
     <string name="SobreNós2"> Siga-nos nas nossas redes sociais para poder ficar interado com os alagamentos que ocorrem na sua região:</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_alertar">Map</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="entrar">Entrar</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="nao_possui_cadastro">Não possui cadastro?</string>
+    <string name="cadastar">cadastar</string>
+    <string name="desejo_me_manter_conectado">Desejo me manter conectado</string>
+    <string name="title_activity_alertar_maps2">Map</string>
+    <string name="aceito_os_termos_de_uso_e_privacidade">Termos de uso e privacidade</string>
+    <string name="nome">Nome</string>
+
+    <string name="confirma_o_de_senha">Confirmação de senha</string>
+    <string name="data_de_nascimento">Data de nascimento</string>
+    <string name="telefone">Telefone</string>
 
 </resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/colorPrimary"
+    android:layout_marginTop="12dp"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="254dp"
+        android:layout_height="178dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logosombreado" />
+
+    <!--EMAIL -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearemail"
+
+        >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/minha_conta"
+            android:tint="@color/colorPrimaryDark"
+            />
+
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/email"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textColorLink="@color/colorPrimaryDark"
+            
+            />
+
+    </LinearLayout>
+
+    <!--SENHA -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearemail"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearsenha"
+        >
+
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/senha"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/linearsenha"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:textColorHighlight="@color/colorPrimaryDark"/>
+
+
+        </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkManterConectado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearsenha"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserat"
+        android:text="@string/desejo_me_manter_conectado"
+        android:textColor="@color/colorFont"
+        android:textSize="15sp"
+        android:buttonTint="@color/colorPrimaryDark"
+        />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="119dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/chkManterConectado"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+        android:text="@string/entrar"
+        android:onClick="Logar"
+        android:textColor="@color/white"
+
+        />
+
+
+    <TextView
+        android:id="@+id/possuicadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/nao_possui_cadastro"
+        android:textColor="@color/colorFont"
+
+        android:textSize="15sp"
+        android:fontFamily="@font/montserat"/>
+
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="119dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/possuicadastro"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/cadastar"
+        android:textColor="@color/white"
+        android:onClick="CadastrarUsuario"
+
+        />
+
+    <TextView
+        android:id="@+id/txtTermos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCadastrar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserat"
+        android:text="@string/aceito_os_termos_de_uso_e_privacidade"
+        android:textColor="@color/colorFont"
+        android:textSize="15sp"
+        android:linksClickable="true"
+        />
+
+
+</RelativeLayout>

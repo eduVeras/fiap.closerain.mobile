@@ -1,7 +1,6 @@
 package br.com.fiap.closerain;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +16,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback {
