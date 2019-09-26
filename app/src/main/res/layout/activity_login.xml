@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="254dp"
-        android:layout_height="178dp"
+        android:layout_width="241dp"
+        android:layout_height="167dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/logosombreado" />
 
@@ -50,7 +50,7 @@
             android:textSize="15sp"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:textColorLink="@color/colorPrimaryDark"
-            
+
             />
 
     </LinearLayout>
@@ -96,12 +96,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linearsenha"
         android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/montserat"
         android:text="@string/desejo_me_manter_conectado"
         android:textColor="@color/colorFont"
         android:textSize="15sp"
-        android:buttonTint="@color/colorPrimaryDark"
+        android:buttonTint="@color/cinzaEscuro"
         />
 
 
@@ -126,7 +126,7 @@
         android:layout_height="30dp"
         android:layout_below="@id/btnLogin"
         android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30dp"
         android:text="@string/nao_possui_cadastro"
         android:textColor="@color/colorFont"
 
@@ -142,25 +142,13 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/cadastar"
+        android:text="@string/cadastrar"
         android:textColor="@color/white"
         android:onClick="CadastrarUsuario"
 
         />
 
-    <TextView
-        android:id="@+id/txtTermos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnCadastrar"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserat"
-        android:text="@string/aceito_os_termos_de_uso_e_privacidade"
-        android:textColor="@color/colorFont"
-        android:textSize="15sp"
-        android:linksClickable="true"
-        />
+
 
 
 </RelativeLayout>

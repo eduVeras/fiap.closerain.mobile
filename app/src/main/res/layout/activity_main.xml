@@ -31,8 +31,8 @@
         android:layout_width="413dp"
         android:layout_height="56dp"
         android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/colorPrimaryDark"
         app:itemTextColor="@color/colorPrimaryDark"
+        app:itemIconTint="@color/nav_item_colors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />

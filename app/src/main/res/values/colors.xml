@@ -6,4 +6,6 @@
     <color name="white">#ffff</color>
     <color name="grey">#d6d0d0</color>
     <color name="colorFont">#6f6f6f</color>
+    <color name="cinzaEscuro">#AAA9A9</color>
+
 </resources>

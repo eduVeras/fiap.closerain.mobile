@@ -27,7 +27,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
 
-    String mensagem;
+
 
 
     @Override
@@ -38,7 +38,13 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#7bb3e8")));
+
+        getSupportActionBar().setTitle(Html.fromHtml("Localização"));
+        trocaFragment(new AlertarMapsActivity());
+
+
     }
+
 
     public void trocaFragment(Fragment fragment) {
         getSupportFragmentManager()
@@ -91,16 +97,17 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            switch (item.getItemId()) {
-                case R.id.minha_conta:
 
-                    getSupportActionBar().setTitle(Html.fromHtml("Minha Conta"));
-                    return true;
+            switch (item.getItemId()) {
                 case R.id.localizacao:
 
                     getSupportActionBar().setTitle(Html.fromHtml("Localização"));
                     trocaFragment(new AlertarMapsActivity());
 
+                    return true;
+                case R.id.minha_conta:
+
+                    getSupportActionBar().setTitle(Html.fromHtml("Minha Conta"));
                     return true;
 
                 case R.id.social:
