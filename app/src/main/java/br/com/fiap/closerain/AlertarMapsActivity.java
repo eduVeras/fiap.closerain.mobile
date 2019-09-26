@@ -1,6 +1,8 @@
 package br.com.fiap.closerain;
 
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback {
@@ -37,6 +41,12 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState){
+
+        ActivityCompat.requestPermissions(
+                getActivity(),new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                },0
+        );
 
         mView = inflater.inflate(R.layout.activity_alertar_maps, container, false);
         return mView;
@@ -63,10 +73,21 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         LatLng fiap = new LatLng(-23.574080, -46.623222);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(fiap));
+
         googleMap.addMarker(new MarkerOptions().position(fiap).title("Marker na FIAP"));
         CameraPosition cameraPosition = new CameraPosition(fiap, 17, 0, 0);
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),3000, null);
 
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (PackageManager.PERMISSION_GRANTED ==
+                ContextCompat.checkSelfPermission(
+                        getActivity(), Manifest.permission.ACCESS_FINE_LOCATION
+                )){
+            mGoogleMap.setMyLocationEnabled(true);
+        }
     }
 
 
