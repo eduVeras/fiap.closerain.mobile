@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         trocaFragment(new AlertarMapsActivity());
 
 
+
+
     }
+
 
 
     public void trocaFragment(Fragment fragment) {
@@ -107,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.minha_conta:
 
+                    trocaFragment(new MinhaContaActivity());
                     getSupportActionBar().setTitle(Html.fromHtml("Minha Conta"));
                     return true;
 
@@ -143,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void Alertar(View view) {
         ConfirmarAlerta();
-
     }
 
 
@@ -156,5 +160,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void irInstagram(View view) {
         goToUrl("https://www.instagram.com/closerain_");
+    }
+
+    public void EditarDados(View view) {
+        trocaFragment(new EditarDadosActivity());
+    }
+
+    public void SalvarDados(View view) {
+        trocaFragment(new MinhaContaActivity());
     }
 }

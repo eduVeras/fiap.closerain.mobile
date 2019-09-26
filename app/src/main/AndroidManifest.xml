@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TermosActivity"></activity>
+        <activity android:name=".EditarDadosActivity"></activity>
+        <activity android:name=".MinhaContaActivity" />
+        <activity android:name=".TermosActivity" />
         <activity android:name=".MaskActivity" />
         <activity android:name=".CadastroActivity" />
         <!--

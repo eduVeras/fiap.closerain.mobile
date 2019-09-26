@@ -23,6 +23,14 @@ public class CadastroActivity extends AppCompatActivity {
     EditText edtDataNasc;
     EditText edtTelefone;
 
+    //Tela de minha conta
+//    EditText edtEmailDados;
+//    EditText edtNomeDados;
+//    EditText edtSenhaDados;
+//    EditText edtSenhaConfirmacaoDados;
+//    EditText edtDataNascDados;
+//    EditText edtTelefoneDados;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +43,12 @@ public class CadastroActivity extends AppCompatActivity {
         edtNome = findViewById(R.id.edtNome);
         edtDataNasc = findViewById(R.id.edtDataNasc);
         edtTelefone = findViewById(R.id.edtTelefone);
+
+        //Tela de minha conta
+//        edtEmailDados = findViewById(R.id.edtEmailDados);
+//        edtNomeDados = findViewById(R.id.edtNomeDados);
+//        edtSenhaDados = findViewById(R.id.edtSenhaDados);
+
 
         //Criando mascara telefone
         SimpleMaskFormatter smf = new SimpleMaskFormatter("(NN)NNNNN - NNNN");
@@ -61,6 +75,7 @@ public class CadastroActivity extends AppCompatActivity {
             edtSenhaCadastro.setText("");
             edtSenhaCadastroConfirmacao.setText("");
         } else {
+
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }

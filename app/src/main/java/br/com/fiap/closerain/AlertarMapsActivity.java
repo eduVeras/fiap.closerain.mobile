@@ -64,10 +64,11 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
         LatLng fiap = new LatLng(-23.574080, -46.623222);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(fiap));
         googleMap.addMarker(new MarkerOptions().position(fiap).title("Marker na FIAP"));
-        CameraPosition cameraPosition = new CameraPosition(fiap, 15, 0, 0);
+        CameraPosition cameraPosition = new CameraPosition(fiap, 17, 0, 0);
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),3000, null);
 
     }
+
 
 
 }

@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="32dp"
+        android:id="@+id/linearnome"
+
+        >
+
+
+        <EditText
+            android:id="@+id/edtNomeDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/nome"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearnome"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearemail"
+        >
+
+
+        <EditText
+            android:id="@+id/edtEmailDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/linearsenha"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/email"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearemail"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearsenha"
+        >
+
+
+        <EditText
+            android:id="@+id/edtSenhaDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/linearsenha"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearsenha"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearsenhaConfirmacao"
+        >
+
+
+        <EditText
+            android:id="@+id/edtSenhaConfirmacaoDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/linearsenhaConfirmacao"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:hint="@string/confirma_o_de_senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearsenhaConfirmacao"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearDataNasc"
+
+        >
+
+
+        <EditText
+            android:id="@+id/edtDataNascDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:inputType="date"
+            android:hint="@string/data_de_nascimento"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearDataNasc"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearTelefone"
+
+        >
+
+
+        <EditText
+            android:id="@+id/edtTelefoneDados"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_round"
+            android:fontFamily="@font/montserat"
+            android:inputType="number"
+            android:hint="@string/telefone"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:backgroundTint="@color/cinzaClaro"
+
+            />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/EditarDados"
+        android:layout_width="119dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/linearTelefone"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/editar_dados"
+        android:textColor="@color/white"
+        android:onClick="EditarDados"
+
+        />
+</RelativeLayout>

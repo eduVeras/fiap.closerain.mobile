@@ -7,5 +7,6 @@
     <color name="grey">#d6d0d0</color>
     <color name="colorFont">#6f6f6f</color>
     <color name="cinzaEscuro">#AAA9A9</color>
+    <color name="cinzaClaro">#DAD8D8</color>
 
 </resources>
