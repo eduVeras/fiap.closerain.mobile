@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlertarMapsActivity">
-    <com.google.android.gms.maps.MapView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/map"/>
 
+    tools:context=".AlertarMapsActivity">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="534dp" />
 
     <ImageButton
         android:id="@+id/imgBtnAlertar"
