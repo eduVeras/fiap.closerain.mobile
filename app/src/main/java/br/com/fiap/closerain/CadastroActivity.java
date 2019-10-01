@@ -9,10 +9,16 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+
+import br.com.fiap.closerain.models.UsuarioViewModel;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -23,13 +29,6 @@ public class CadastroActivity extends AppCompatActivity {
     EditText edtDataNasc;
     EditText edtTelefone;
 
-    //Tela de minha conta
-//    EditText edtEmailDados;
-//    EditText edtNomeDados;
-//    EditText edtSenhaDados;
-//    EditText edtSenhaConfirmacaoDados;
-//    EditText edtDataNascDados;
-//    EditText edtTelefoneDados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +47,7 @@ public class CadastroActivity extends AppCompatActivity {
 //        edtEmailDados = findViewById(R.id.edtEmailDados);
 //        edtNomeDados = findViewById(R.id.edtNomeDados);
 //        edtSenhaDados = findViewById(R.id.edtSenhaDados);
+
 
 
         //Criando mascara telefone
@@ -70,11 +70,24 @@ public class CadastroActivity extends AppCompatActivity {
             Toast.makeText(this, "Senhas não correspondem!", Toast.LENGTH_SHORT).show();
             edtSenhaCadastro.setText("");
             edtSenhaCadastroConfirmacao.setText("");
-        }else if(edtSenhaCadastro.getText().length()<6){
+        } else if (edtSenhaCadastro.getText().length() < 6) {
             Toast.makeText(this, "Senha fraca!", Toast.LENGTH_SHORT).show();
             edtSenhaCadastro.setText("");
             edtSenhaCadastroConfirmacao.setText("");
         } else {
+
+            UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
+
+            usuarioViewModel.setEmail(edtEmailCadastro.getText().toString());
+            usuarioViewModel.setNome(edtNome.getText().toString());
+            usuarioViewModel.setSenha(edtSenhaCadastro.toString());
+            usuarioViewModel.setNascimento(edtDataNasc.getText().toString());
+            usuarioViewModel.setTelefone(edtTelefone.getText().toString());
+
+            //Enviar esse usuario para o backend
+            
+
+
 
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
