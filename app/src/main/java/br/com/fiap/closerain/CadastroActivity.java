@@ -3,24 +3,42 @@ package br.com.fiap.closerain;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.webkit.WebResourceRequest;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 import br.com.fiap.closerain.models.UsuarioViewModel;
 
 public class CadastroActivity extends AppCompatActivity {
+
+
+    String url = "http://www.google.com";
 
     EditText edtEmailCadastro;
     EditText edtSenhaCadastro;
@@ -49,7 +67,6 @@ public class CadastroActivity extends AppCompatActivity {
 //        edtSenhaDados = findViewById(R.id.edtSenhaDados);
 
 
-
         //Criando mascara telefone
         SimpleMaskFormatter smf = new SimpleMaskFormatter("(NN)NNNNN - NNNN");
         MaskTextWatcher mtw = new MaskTextWatcher(edtTelefone, smf);
@@ -61,7 +78,7 @@ public class CadastroActivity extends AppCompatActivity {
         edtDataNasc.addTextChangedListener(mtw2);
     }
 
-    public void Cadastrar(View view) {
+    public void Cadastrar(View view) throws IOException {
         if (edtEmailCadastro.getText().toString().trim().equals("") || (edtNome.getText().toString().trim().equals("")
                 || (edtSenhaCadastro.getText().toString().trim().equals("") || (edtSenhaCadastroConfirmacao.getText().toString().trim().equals(""))
                 || (edtDataNasc.getText().toString().trim().equals("") || (edtTelefone.getText().toString().trim().equals("")))))) {
@@ -76,7 +93,7 @@ public class CadastroActivity extends AppCompatActivity {
             edtSenhaCadastroConfirmacao.setText("");
         } else {
 
-            UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
+            final UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
 
             usuarioViewModel.setEmail(edtEmailCadastro.getText().toString());
             usuarioViewModel.setNome(edtNome.getText().toString());
@@ -85,12 +102,35 @@ public class CadastroActivity extends AppCompatActivity {
             usuarioViewModel.setTelefone(edtTelefone.getText().toString());
 
             //Enviar esse usuario para o backend
-            
+            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            // response
 
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            // error
+                        }
+                    }
+            ) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("Email", usuarioViewModel.getEmail());
+                    params.put("Nome", usuarioViewModel.getNome());
+                    params.put("Senha", usuarioViewModel.getSenha());
+                    params.put("Nascimento", usuarioViewModel.getNascimento());
+                    params.put("Telefone", usuarioViewModel.getTelefone());
 
-
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+                    return params;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(postRequest);
         }
     }
 
