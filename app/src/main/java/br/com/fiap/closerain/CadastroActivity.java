@@ -93,44 +93,44 @@ public class CadastroActivity extends AppCompatActivity {
             edtSenhaCadastroConfirmacao.setText("");
         } else {
 
-            final UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
-
-            usuarioViewModel.setEmail(edtEmailCadastro.getText().toString());
-            usuarioViewModel.setNome(edtNome.getText().toString());
-            usuarioViewModel.setSenha(edtSenhaCadastro.toString());
-            usuarioViewModel.setNascimento(edtDataNasc.getText().toString());
-            usuarioViewModel.setTelefone(edtTelefone.getText().toString());
-
-            //Enviar esse usuario para o backend
-            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            // response
-
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            // error
-                        }
-                    }
-            ) {
-                @Override
-                protected Map<String, String> getParams() {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("Email", usuarioViewModel.getEmail());
-                    params.put("Nome", usuarioViewModel.getNome());
-                    params.put("Senha", usuarioViewModel.getSenha());
-                    params.put("Nascimento", usuarioViewModel.getNascimento());
-                    params.put("Telefone", usuarioViewModel.getTelefone());
-
-                    return params;
-                }
-            };
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(postRequest);
+//            final UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
+//
+//            usuarioViewModel.setEmail(edtEmailCadastro.getText().toString());
+//            usuarioViewModel.setNome(edtNome.getText().toString());
+//            usuarioViewModel.setSenha(edtSenhaCadastro.toString());
+//            usuarioViewModel.setNascimento(edtDataNasc.getText().toString());
+//            usuarioViewModel.setTelefone(edtTelefone.getText().toString());
+//
+//            //Enviar esse usuario para o backend
+//            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+//                    new Response.Listener<String>() {
+//                        @Override
+//                        public void onResponse(String response) {
+//                            // response
+//
+//                        }
+//                    },
+//                    new Response.ErrorListener() {
+//                        @Override
+//                        public void onErrorResponse(VolleyError error) {
+//                            // error
+//                        }
+//                    }
+//            ) {
+//                @Override
+//                protected Map<String, String> getParams() {
+//                    Map<String, String> params = new HashMap<String, String>();
+//                    params.put("Email", usuarioViewModel.getEmail());
+//                    params.put("Nome", usuarioViewModel.getNome());
+//                    params.put("Senha", usuarioViewModel.getSenha());
+//                    params.put("Nascimento", usuarioViewModel.getNascimento());
+//                    params.put("Telefone", usuarioViewModel.getTelefone());
+//
+//                    return params;
+//                }
+//            };
+//            RequestQueue requestQueue = Volley.newRequestQueue(this);
+//            requestQueue.add(postRequest);
         }
     }
 

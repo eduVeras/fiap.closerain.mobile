@@ -50,11 +50,6 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ActivityCompat.requestPermissions(
-                getActivity(), new String[]{
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                }, 0
-        );
 
         mView = inflater.inflate(R.layout.activity_alertar_maps, container, false);
         return mView;
@@ -63,6 +58,12 @@ public class AlertarMapsActivity extends Fragment implements OnMapReadyCallback 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ActivityCompat.requestPermissions(
+                getActivity(), new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                }, 0
+        );
+
         mMapView = (MapView) mView.findViewById(R.id.map);
         if (mMapView != null) {
             mMapView.onCreate(null);
