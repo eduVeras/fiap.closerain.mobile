@@ -11,18 +11,30 @@
     <com.google.android.gms.maps.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="534dp" />
+        android:layout_height="693dp" />
 
-    <ImageButton
-        android:id="@+id/imgBtnAlertar"
-        android:layout_width="100dp"
-        android:layout_height="107dp"
-        android:layout_marginLeft="297dp"
-        android:layout_marginTop="422dp"
-        android:backgroundTint="#00A33030"
+<!--    <ImageButton-->
+<!--        android:id="@+id/imgBtnAlertar"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="107dp"-->
+<!--        android:layout_marginLeft="297dp"-->
+<!--        android:layout_marginTop="422dp"-->
+<!--        android:backgroundTint="#00A33030"-->
+<!--        android:src="@drawable/botao_alertar_verm">-->
+<!--    </ImageButton>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="605dp"
+        android:layout_marginLeft="320dp"
+        android:clickable="true"
         android:onClick="Alertar"
-        android:src="@drawable/botao_alertar_verm">
-    </ImageButton>
+        android:src="@drawable/exclamation"
+        map:backgroundTint="#EECA3535"
+        map:fabSize="auto"
+        map:maxImageSize="42dp" />
 
 
 </FrameLayout>

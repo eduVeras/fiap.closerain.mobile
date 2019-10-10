@@ -39,4 +39,5 @@
     <string name="TermosTitulo">Política de Privacidade do CloseRain</string>
     <string name="editar_dados">Editar dados</string>
     <string name="salvar_dados">Salvar dados</string>
+    <string name="sublinhado">____________________________</string>
 </resources>

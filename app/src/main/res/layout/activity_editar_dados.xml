@@ -12,7 +12,7 @@
         android:layout_height="44dp"
         android:layout_below="@id/linearTelefone"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="SalvarDados"
         android:text="@string/salvar_dados"
@@ -34,7 +34,7 @@
         <EditText
             android:id="@+id/edtEmailDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenha"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -58,7 +58,7 @@
         <EditText
             android:id="@+id/edtSenhaDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenha"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -83,7 +83,7 @@
         <EditText
             android:id="@+id/edtSenhaConfirmacaoDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenhaConfirmacao"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -109,7 +109,7 @@
         <EditText
             android:id="@+id/edtDataNascDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/data_de_nascimento"
@@ -135,7 +135,7 @@
         <EditText
             android:id="@+id/edtTelefoneDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/telefone"
@@ -159,7 +159,7 @@
         <EditText
             android:id="@+id/edtNomeDadosEditar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/nome"

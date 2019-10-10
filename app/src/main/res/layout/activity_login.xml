@@ -13,8 +13,9 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="241dp"
-        android:layout_height="167dp"
+        android:layout_width="258dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/logosombreado" />
 
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
         android:orientation="horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="50dp"
         android:layout_centerInParent="true"
         android:id="@+id/linearemail"
 
@@ -32,24 +33,23 @@
 
         <ImageView
             android:layout_width="36dp"
-            android:layout_height="30dp"
+            android:layout_height="32dp"
             android:layout_marginTop="7dp"
             android:src="@drawable/minha_conta"
-            android:tint="@color/colorPrimaryDark"
-            />
+            android:tint="@color/colorPrimaryDark" />
 
 
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/email"
             android:padding="15dp"
-            android:textSize="15sp"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:textColorLink="@color/colorPrimaryDark"
+            android:textSize="15sp"
 
             />
 
@@ -69,23 +69,23 @@
 
         <ImageView
             android:layout_width="36dp"
-            android:layout_height="29dp"
+            android:layout_height="31dp"
             android:layout_marginTop="7dp"
             android:src="@drawable/senha"
-            android:tint="@color/colorPrimaryDark"/>
+            android:tint="@color/colorPrimaryDark" />
 
         <EditText
             android:id="@+id/edtSenha"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenha"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/senha"
             android:inputType="textPassword"
             android:padding="15dp"
-            android:textSize="15sp"
-            android:textColorHighlight="@color/colorPrimaryDark"/>
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="15sp" />
 
 
         </LinearLayout>

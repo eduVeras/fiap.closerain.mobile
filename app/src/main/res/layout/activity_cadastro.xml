@@ -34,7 +34,7 @@
         <EditText
             android:id="@+id/edtNome"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
             android:hint="@string/nome"
@@ -58,7 +58,7 @@
         <EditText
             android:id="@+id/edtEmailCadastro"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenha"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -83,7 +83,7 @@
         <EditText
             android:id="@+id/edtSenhaCadastro"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenha"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -109,7 +109,7 @@
         <EditText
             android:id="@+id/edtSenhaCadastroConfirmacao"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_alignEnd="@+id/linearsenhaConfirmacao"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
@@ -135,11 +135,11 @@
         <EditText
             android:id="@+id/edtDataNasc"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
-            android:inputType="date"
             android:hint="@string/data_de_nascimento"
+            android:inputType="date"
             android:padding="15dp"
             android:textSize="15sp"
 
@@ -161,14 +161,13 @@
         <EditText
             android:id="@+id/edtTelefone"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/edit_round"
             android:fontFamily="@font/montserat"
-            android:inputType="number"
             android:hint="@string/telefone"
+            android:inputType="number"
             android:padding="15dp"
-            android:textSize="15sp"
-            />
+            android:textSize="15sp" />
     </LinearLayout>
 
 
@@ -179,7 +178,7 @@
         android:layout_height="44dp"
         android:layout_below="@id/linearTelefone"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/cadastrar"
         android:textColor="@color/white"
@@ -200,6 +199,18 @@
         android:text="@string/aceito_os_termos_de_uso_e_privacidade"
         android:textColor="@color/colorFont"
         android:textSize="15sp" />
-
+    <TextView
+        android:id="@+id/txtSublinhado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTermos"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-17dp"
+        android:fontFamily="@font/montserat"
+        android:linksClickable="true"
+        android:onClick="irTermos"
+        android:text="@string/sublinhado"
+        android:textColor="@color/colorFont"
+        android:textSize="15sp" />
 
 </RelativeLayout>

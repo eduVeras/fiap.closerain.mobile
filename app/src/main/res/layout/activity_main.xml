@@ -14,8 +14,8 @@
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
-        android:layout_width="0dp"
-        android:layout_height="662dp"
+        android:layout_width="412dp"
+        android:layout_height="689dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
