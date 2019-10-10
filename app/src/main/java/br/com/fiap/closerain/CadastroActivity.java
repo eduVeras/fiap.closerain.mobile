@@ -93,6 +93,9 @@ public class CadastroActivity extends AppCompatActivity {
             edtSenhaCadastroConfirmacao.setText("");
         } else {
 
+
+            
+
 //            final UsuarioViewModel usuarioViewModel = new UsuarioViewModel();
 //
 //            usuarioViewModel.setEmail(edtEmailCadastro.getText().toString());
@@ -101,9 +104,15 @@ public class CadastroActivity extends AppCompatActivity {
 //            usuarioViewModel.setNascimento(edtDataNasc.getText().toString());
 //            usuarioViewModel.setTelefone(edtTelefone.getText().toString());
 //
+//JSONObject params = new JSONObject();
+            //params.put("Email", usuarioViewModel.getEmail());
+            //params.put("Nome", usuarioViewModel.getNome());
+            //params.put("Senha", usuarioViewModel.getSenha());
+            //params.put("Nascimento", usuarioViewModel.getNascimento());
+            //params.put("Telefone", usuarioViewModel.getTelefone());
+            
 //            //Enviar esse usuario para o backend
-//            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-//                    new Response.Listener<String>() {
+//            JsonObjectRequest postRequest = new JsonObjectRequest(Request.Method.POST,url,params,new Response.Listener()) {
 //                        @Override
 //                        public void onResponse(String response) {
 //                            // response
@@ -117,22 +126,19 @@ public class CadastroActivity extends AppCompatActivity {
 //                        }
 //                    }
 //            ) {
-//                @Override
-//                protected Map<String, String> getParams() {
-//                    Map<String, String> params = new HashMap<String, String>();
-//                    params.put("Email", usuarioViewModel.getEmail());
-//                    params.put("Nome", usuarioViewModel.getNome());
-//                    params.put("Senha", usuarioViewModel.getSenha());
-//                    params.put("Nascimento", usuarioViewModel.getNascimento());
-//                    params.put("Telefone", usuarioViewModel.getTelefone());
-//
-//                    return params;
-//                }
+
+                  
 //            };
 //            RequestQueue requestQueue = Volley.newRequestQueue(this);
 //            requestQueue.add(postRequest);
         }
     }
+
+    public void irTermos(View view) {
+        Intent intent = new Intent(this, TermosActivity.class);
+        startActivity(intent);
+    }
+}
 
     public void irTermos(View view) {
         Intent intent = new Intent(this, TermosActivity.class);
